@@ -1,0 +1,54 @@
+/*google font*/
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Dancing Script', cursive;
+    color: black;
+}
+
+/*nav bar*/
+header {
+    background-color: black;
+    opacity: .6;
+    color: white;
+    padding: 20px 35px;
+   
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    background-image: url("../images/hero-bg.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 80%;
+    z-index: 9999;
+}
+
+.title{
+    color: red; 
+}
+
+nav{
+hover: green;
+}
+
+/*Hero start*/
+.hero{
+    background-image: url("../images/backgrounds/spices.jpg");
+ margin: auto; 
+ width: 100%;
+
+}
+
+.hero img {
+    border-radius: 3px; 
+    margin: auto; 
+    position: center; 
+}
