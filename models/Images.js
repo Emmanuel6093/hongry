@@ -25,4 +25,4 @@ Images.init(
   }
 );
 
-module.exports = Ingredient;
+module.exports = Images;

@@ -17,10 +17,17 @@ Recipe.init(
         allowNull: false,
     },
     
-    ingredient_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
+    descriptions: {
+        type: DataTypes.STRING,
     },
+
+    created_by_user: {
+        type: DataTypes.INTEGER,
+        references: {
+            model:'user',
+            key: 'id'
+        }
+    }
 
 },
 {
