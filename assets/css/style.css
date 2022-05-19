@@ -1,5 +1,6 @@
 /*google font*/
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -7,48 +8,111 @@
 }
 
 body{
-    font-family: 'Dancing Script', cursive;
-    color: black;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 /*nav bar*/
 header {
     background-color: black;
-    opacity: .6;
     color: white;
     padding: 20px 35px;
-   
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     position: sticky;
     position: -webkit-sticky;
     top: 0;
-    background-image: url("../images/hero-bg.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: 80%;
-    z-index: 9999;
 }
-
-.title{
-    color: red; 
+header h1{
+    font-weight: bold;
+    margin: 0;
+    font-size: 36px;
+    color: white; 
+   
+  }
+.red{
+    color: orange;
 }
-
-nav{
-hover: green;
-}
-
 /*Hero start*/
-.hero{
-    background-image: url("../images/backgrounds/spices.jpg");
- margin: auto; 
- width: 100%;
+h2{
+    font-family: Dancing, cursive;
 
 }
+/*background picture in hero*/
+.hero{
+    position: absolute;
+    background-image: url("../images/backgrounds/spices.jpg");
+    background-color: green; 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+height: 100%;
+}
+ 
 
-.hero img {
-    border-radius: 3px; 
-    margin: auto; 
-    position: center; 
+
+header a {
+    text-decoration: none;
+    color: white; 
+  }
+  
+  header nav {
+    margin: 7px 0;
+  }
+  
+  header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
+  
+  header nav ul li a {
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 1.55vw;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  header nav ul li a:hover {
+    background: rgb(112, 202, 84);
+    color: black;
+    border-radius: 15px;
+    text-shadow: none;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+    
+    
+  }
+/*logo*/
+.hero .logo {
+    border-radius: 50%;
+    width: 20%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    border: 10px solid white;
+}
+
+/*Welcome*/
+.hero .welcome {
+    font-family: 'Dancing Script', cursive;
+    background-color: white; 
+    color: black; 
+    text-align: center;
+    margin: auto;
+width: 52%;
+    border: 3px solid black;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 50px;
 }
