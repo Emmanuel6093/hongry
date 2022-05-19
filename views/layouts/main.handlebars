@@ -1,0 +1,39 @@
+{{!-- Placeholder/Insert for the main page content with loggedIn validation included --}}
+
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <link
+      rel='stylesheet'
+      href='../../public/css/style.css'
+      type='text/css'
+    />
+    <title>Hongry</title>
+  </head>
+  <body>
+    <div class='wrapper'>
+      <header>
+        <h1 id='header-logo'>H O N G R Y</h1>
+        <nav>
+          <a class='navItem' href='/'>Home</a>
+          {{#if loggedIn}}
+            <a class='navItem' href='/dashboard'>Dashboard</a>
+            <a class='navItem' id='logout'>Logout</a>
+          {{else}}
+            <a class='navItem' href='/login'>Login</a>
+          {{/if}}
+        </nav>
+        {{! Empty element to be used with space between to fill~}}
+        <div id='blank'></div>
+      </header>
+      <main>
+        {{{body}}}
+      </main>
+    </div>
+  </body>
+</html>
+<script src='/public/js/main.js'></script>
+{{#if loggedIn}}
+  <script src='/public/js/logout.js'></script>
+{{/if}}
