@@ -1,5 +1,6 @@
-//NEEDS CODE-REVISION-
-// ----- ----- ----- ----- EXECUTED IN DASHBOARD TEMPLATE --------------------------------
+//NEEDS CODE-REVISION-//
+//*****************NEEDS A WAY TO ADD INGREDIENTS of RECIPE to INGREDIENTS TABLE*****************//
+// ----- ----- ----- ----- EXECUTED IN DASHBOARD TEMPLATE --------------------------------//
 
 const addRecipeForm = document.getElementById('addRecipe-form');
 
