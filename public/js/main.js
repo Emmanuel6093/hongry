@@ -6,7 +6,7 @@ headerLogoEl.addEventListener('click', () => {
   document.location.replace('/');
 });
 
-// Highlights the active nav item
+// Highlights the active nav item *NEEDS TO CORRESPOND TO CSS CLASS FOR ACTIVE NAV*
 const navItems = document.querySelectorAll('.navItem');
 
 if (navItems.length == 2) {
