@@ -13,6 +13,7 @@ async function newRecipeHandler(event) {
     const ingredient_name = document.getElementById('add-ingredient').value;
     const quantity = document.getElementById('add-quantity').value;
     const unit = document.getElementById('add-unit').value;
+    const image = document.getElementById('add-image').value;
     // Fetches using values then inserts data into body (to be extracted in the route (EXAMPLE: req.body.recipe_title) )
     const responseR = await fetch(`/api/recipes`, {
         method: 'POST',
