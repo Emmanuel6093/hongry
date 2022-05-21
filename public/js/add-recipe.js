@@ -13,6 +13,7 @@ async function newRecipeHandler(event) {
     const ingredient_name = document.getElementById('add-ingredient').value;
     const quantity = document.getElementById('add-quantity').value;
     const unit = document.getElementById('add-unit').value;
+    const image = document.getElementById('add-image').value;
     // Fetches using values then inserts data into body (to be extracted in the route (EXAMPLE: req.body.recipe_title) )
     const responseR = await fetch(`/api/recipes`, {
         method: 'POST',
@@ -43,18 +44,19 @@ async function newRecipeHandler(event) {
     });
 
     // IF response = OK refresh page. 
-    if (responseR.ok) {
+    if (responseI.ok) {
         document.location.replace('/dashboard');
     } else {
         // Log/Alert error
-        alert(responseR.statusText);
+        alert(responseI.statusText);
     }
 }
 
-const responseI = await fetch(`/api/ingredients`, {
+const responseRI = await fetch(`/api/recipeingredients`, {
     method: 'POST',
     body: JSON.stringify({
-        ingredient_name
+        quantity,
+        unit
     }),
     headers: {
         'Content-Type': 'application/json',
@@ -62,11 +64,11 @@ const responseI = await fetch(`/api/ingredients`, {
 });
 
 // IF response = OK refresh page. 
-if (responseI.ok) {
+if (responseRI.ok) {
     document.location.replace('/dashboard');
 } else {
     // Log/Alert error
-    alert(responseI.statusText);
+    alert(responseRI.statusText);
 }
 
 

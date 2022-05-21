@@ -2,7 +2,7 @@ CREATE TABLE "recipe"(
     "recipe_id" INT NOT NULL,
     "name" INT NOT NULL,
     "description" INT NOT NULL,
-    "created_by" NVARCHAR(255) NOT NULL
+    "created_by" INT NOT NULL
 );
 ALTER TABLE
     "recipe" ADD CONSTRAINT "recipe_recipe_id_primary" PRIMARY KEY("recipe_id");
@@ -19,7 +19,6 @@ CREATE TABLE "ingredients"(
 ALTER TABLE
     "ingredients" ADD CONSTRAINT "ingredients_ingredient_id_primary" PRIMARY KEY("ingredient_id");
 CREATE TABLE "RecipeIngredient"(
-    "column_1" INT NOT NULL,
     "recipe_id" INT NOT NULL,
     "ingredient_id" INT NOT NULL,
     "quantity" INT NOT NULL,

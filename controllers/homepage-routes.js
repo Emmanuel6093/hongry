@@ -1,8 +1,8 @@
 const router = require('express').Router();
 
-// Render the login page (template)
+// Render the home page (template)
 router.get('/', (req, res) => {
-    res.render('login');
+    res.render('homepage');
 });
 
 module.exports = router;
