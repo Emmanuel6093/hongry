@@ -44,18 +44,19 @@ async function newRecipeHandler(event) {
     });
 
     // IF response = OK refresh page. 
-    if (responseR.ok) {
+    if (responseI.ok) {
         document.location.replace('/dashboard');
     } else {
         // Log/Alert error
-        alert(responseR.statusText);
+        alert(responseI.statusText);
     }
 }
 
-const responseI = await fetch(`/api/ingredients`, {
+const responseRI = await fetch(`/api/recipeingredients`, {
     method: 'POST',
     body: JSON.stringify({
-        ingredient_name
+        quantity,
+        unit
     }),
     headers: {
         'Content-Type': 'application/json',
@@ -63,11 +64,11 @@ const responseI = await fetch(`/api/ingredients`, {
 });
 
 // IF response = OK refresh page. 
-if (responseI.ok) {
+if (responseRI.ok) {
     document.location.replace('/dashboard');
 } else {
     // Log/Alert error
-    alert(responseI.statusText);
+    alert(responseRI.statusText);
 }
 
 
