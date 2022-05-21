@@ -71,6 +71,6 @@ const recipeIngredient =
   }
 ];
 
-const seedRecipeIngredient = () => Post.bulkCreate(recipeIngredient);
+const seedRecipeIngredient = () => recipeIngredient.bulkCreate(recipeIngredientData);
 
 module.exports = seedRecipeIngredient;
