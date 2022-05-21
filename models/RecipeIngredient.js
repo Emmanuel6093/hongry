@@ -37,7 +37,7 @@ RecipeIngredient.init({
         type: DataTypes.STRING,
     },
 
-    images: {
+    images_id: {
         type: DataTypes.INTEGER,
         references: {
             model: 'images',
