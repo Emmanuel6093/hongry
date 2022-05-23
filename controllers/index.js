@@ -5,9 +5,11 @@ const router = require('express').Router();
 const loginRoutes = require('./login-routes');
 const apiRoutes = require('./api');
 const homepageRoutes = require('./homepage-routes')
+const addrecipesroutes = require('./add-recipe-routes')
 
 router.use('/login', loginRoutes);
 router.use('/api', apiRoutes);
 router.use('/', homepageRoutes);
+router.use('/addrecipes', addrecipesroutes)
 
 module.exports = router;
