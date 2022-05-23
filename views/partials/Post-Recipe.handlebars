@@ -1,0 +1,39 @@
+<script id="my-template" type="text/x-handlebars-template">
+  <div id="recipe">
+    <p>{{description}}</p>
+    <ul>
+      {{#each ingredients}}
+      <li>{{name}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</script>
+{{!
+let recipe = {
+  description: 'yummy chicken noodle soup',
+  ingredients: [
+    {quantity: "1 cup", name: 'chicken'},
+    {quantity: "3 nanoliters", name: 'stock'},
+    {quantity: "12", name: 'noodles'}
+  ]
+}
+
+let template = document.getElementById("my-template").innerHTML;
+let templateFn = Handlebars.compile(template);
+let html = templateFn(recipe);
+}}
+
+<script id="main-template" type="text/x-handlebars-template">
+  {{> namePartial }}
+</script>
+<script id="partial-template" type="text/x-handlebars-template">
+  <div>{{ name }}</div>
+</script>
+
+{{! Handlebars.registerPartial('namePartial', document.getElementById("partial-template").innerHTML)
+function renderMain() {
+  let template = document.getElementById("main-template").innerHTML;
+  let templateFunction = Handlebars.compile(template);
+  let html = templateFunction({name: 'Gordon Ramsay'});
+}
+}}
