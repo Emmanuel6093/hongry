@@ -1,25 +1,25 @@
 const { Recipe } = require('../models')
 
 const recipeData = [{
-        name: 'Your Mom',
-        description: 'Probably quite loose if you ask about town',
+        name: 'recipe',
+        description: 'Description1',
         user_id: '1'
     },
     {
-        name: 'Your Mom2',
-        description: 'Probably quite loose if you ask about town2',
+        name: 'recipe2',
+        description: 'description2',
         user_id: '2'
     }, {
-        name: 'Your Mom3',
-        description: 'Probably quite loose if you ask about town3',
+        name: 'recipe3',
+        description: 'description3',
         user_id: '3'
     }, {
-        name: 'Your Mom4',
-        description: 'Probably quite loose if you ask about town4',
+        name: 'recipe4',
+        description: 'description4',
         user_id: '4'
     }, {
-        name: 'Your Mom5',
-        description: 'Probably quite loose if you ask about town5',
+        name: 'recipe5',
+        description: 'description5',
         user_id: '1'
     },
 ]
