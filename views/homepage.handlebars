@@ -1,16 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>H O N G R Y</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" type="image/png" href="css/images/logos/Hongry (1).png"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-</head>
 <div class='wrapper'>
       {{!-- <header>
         <h1 id='header-logo'>H O N G R Y</h1>
@@ -28,12 +15,12 @@
         <div id='blank'></div>
       </header> --}}
       <!--Nav Bar-->
-   <header>
-    <h1 class="title">
-        <a href="/">H O N G R Y</a>
-        <script src='/public/js/logout.js'></script>
-    </h1>
-       <nav>
+    <header>
+      <h1 class="title">
+          <a href="/">H O N G R Y</a>
+          <script src='/public/js/logout.js'></script>
+      </h1>
+      <nav>
            <ul>
                <li>
                    <a href="#About">About Us</a>
@@ -59,51 +46,53 @@
                  </li>
                  {{/if}}
         </ul>   
-        </nav>
-        </header>
-        <!--Hero Start-->   
-        <section class="hero">
-            <div class="hero-two">
-            <img class="logo" src="css/images/logos/Hongry (1).png">
-            <h1 class="welcome">WELCOME!</h1>
-            <p>Welcome to our site. We are H O N G R Y! Taking your basic ingredients
-              from home and creating scrumptious meals for you to work with what you got!
-              Simply insert your ingredients and we will spit out a recipe you can make with them!
-            </p>
-            <button>Get Started</button>           
+      </nav>
+    </header>
+        <!--Hero Start--> 
+    <div class='mt4 p-5 jumbo-hero d-flex justify-content-center'>
+      <div class="card card-z-index " style="width: 18rem;">
+        <img src="css/images/logos/Hongry (1).png" class="card-img-top rounded-circle" alt="...">
+        <div class="card-body">
+          <p class="card-text"><span class='fs-2'>Welcome</span> to our site. We are H O N G R Y! Taking your basic ingredients
+                from home and creating scrumptious meals for you to work with what you got!
+                Simply insert your ingredients and we will spit out a recipe you can make with them!</p>
         </div>
-        </section>
+      </div>
+    </div> 
+
       <!--About Section-->
-        <section>
-<h2 id="About">ABOUT US</h2>
-<p>We are 4 insipring coders working together to </p>
-    <button>Create an Account</button>
+    <section class='mt4 p-5 d-flex justify-content-center flex-column'>
+      <h2 class="text-center" id="About">ABOUT US</h2>
+      <p class="text-center" >We are 4 insipring coders working together to </p>
+      <img class="w-25 align-self-center" src="css/images/backgrounds/pepper.jpg"/>
+      {{!-- <div class='mw-25'>
+      </div> --}}
     </section>
 <!--Sample of Recipe page-->
-<section>
-    <h2 id="Recipes">Recipes</h2>
-    <img src="css/images/food/pancake.jpg"
-    <h2>Good Old Fashioned Pancakes</h2>
-    <p>PREP: 5 mins</p>
-    <p>COOK: 15 mins</p>
-    <p>SERVINGS: 8</p>
-    <p>Dolore magna fugiat mollit occaecat.</p>
-    <h3>INGREDIENTS</h3>
-    <p>1-<mfac>1/2</mfac> cups all purpose flour</p>
-    <p>3-<mfac>1/2</mfac> teaspon baking powder</p>
-    <p><mfac>1/4</mfac> teaspoon salt</p>
-    <p>1-<mfac>1/4</mfac> cups milk</p>
-    <p>1 egg</p>
-    <p>3 tablespoons butter, melted</p>
-    <h3>DIRECTIONS</h3>
-    <p>1.     In a large bowl, sift together the flour, baking powder, salt and sugar. Make a well in the center and pour in the milk, egg and melted butter; mix until smooth. </p>
-    <p>2.     Heat a lightly oiled griddle or frying pan over medium-high heat. Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake. Brown on both sides and serve hot.</p>
-<button>Learn More</button>
-</section>
-<section>
-<h2 id="#Testimonials">Testimonials</h2>
-<img src="css/images/people/abigal.jpg">
-<p>Anim magna qui qui sit sit duis qui ea duis deserunt proident consectetur. 
+    {{!-- <section>
+      <h2 id="Recipes">Recipes</h2>
+      <img src="css/images/food/pancake.jpg"
+      <h2>Good Old Fashioned Pancakes</h2>
+      <p>PREP: 5 mins</p>
+      <p>COOK: 15 mins</p>
+      <p>SERVINGS: 8</p>
+      <p>Dolore magna fugiat mollit occaecat.</p>
+      <h3>INGREDIENTS</h3>
+      <p>1-<mfac>1/2</mfac> cups all purpose flour</p>
+      <p>3-<mfac>1/2</mfac> teaspon baking powder</p>
+      <p><mfac>1/4</mfac> teaspoon salt</p>
+      <p>1-<mfac>1/4</mfac> cups milk</p>
+      <p>1 egg</p>
+      <p>3 tablespoons butter, melted</p>
+      <h3>DIRECTIONS</h3>
+      <p>1.     In a large bowl, sift together the flour, baking powder, salt and sugar. Make a well in the center and pour in the milk, egg and melted butter; mix until smooth. </p>
+      <p>2.     Heat a lightly oiled griddle or frying pan over medium-high heat. Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake. Brown on both sides and serve hot.</p>
+  <button>Learn More</button>
+    </section> --}}
+{{!-- <section>
+  <h2 id="#Testimonials">Testimonials</h2>
+  <img src="css/images/people/abigal.jpg">
+  <p>Anim magna qui qui sit sit duis qui ea duis deserunt proident consectetur. 
     Aliqua eu laboris est ex occaecat qui proident laborum sit qui ex anim. Non ex laboris ea in non ex. Fugiat voluptate enim anim sint enim nulla anim non dolor qui tempor sit. 
     Enim aliquip aliqua minim culpa tempor nisi.</p>
 <img src="css/images/people/john.jpg">
@@ -131,6 +120,6 @@
         <button type="submit">Submit</button>
       </form>
     <p>Private Policy</p>
-</footer>
+</footer> --}}
 
-      <script src = '../public/js/homepage.js/'></script>
+<script src = '../public/js/homepage.js/'></script>
