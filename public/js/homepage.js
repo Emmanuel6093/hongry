@@ -8,3 +8,22 @@ headerLogoEl.addEventListener('click', () => {
 
 // Highlights the active nav item *NEEDS TO CORRESPOND TO CSS CLASS FOR ACTIVE NAV*
 const navItems = document.querySelectorAll('.navItem');
+
+if (navItems.length == 2) {
+    if (window.location.pathname == '/') {
+        navItems[0].classList.add('active');
+    }
+    if (window.location.pathname == '/login') {
+        navItems[1].classList.add('active');
+    }
+} else {
+    if (window.location.pathname == '/') {
+        navItems[0].classList.add('active');
+    }
+    if (window.location.pathname == '/viewrecipes') {
+        navItems[1].classList.add('active');
+    }
+    if (window.location.pathname == '/login') {
+        navItems[2].classList.add('active');
+    }
+}
