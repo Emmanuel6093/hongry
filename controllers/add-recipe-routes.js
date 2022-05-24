@@ -30,7 +30,7 @@ router.post('/', async(req, res) => {
         })
         await RecipeIngredient.bulkCreate(ingredientData)
 
-        res.redirect('/dashboard');
+        res.redirect('/homepage');
     } catch (error) {
         console.log(error);
         res.status(400).json(error);
