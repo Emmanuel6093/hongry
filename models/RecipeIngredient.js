@@ -20,12 +20,8 @@ RecipeIngredient.init({
         }
     },
 
-    ingredient_id: {
-        type: DataTypes.INTEGER,
-        references: {
-            model: 'ingredient',
-            key: 'id'
-        }
+    ingredient_name: {
+        type: DataTypes.STRING,
     },
 
     quantity: {
@@ -37,13 +33,8 @@ RecipeIngredient.init({
         type: DataTypes.STRING,
     },
 
-    images_id: {
-        type: DataTypes.INTEGER,
-        references: {
-            model: 'images',
-            key: 'id'
-        }
-    }
+
+
 }, {
     sequelize,
     timestamps: false,

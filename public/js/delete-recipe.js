@@ -1,19 +1,21 @@
 // NEEDS CODE/NEEDS REVISION
 
+const recipedelbtn = document.getElementById('recipedelbtn');
+
 
 async function deleteRecipe(id) {
-    const response = await fetch(`/api/recipes/${id}`, {
-      method: 'DELETE',
+    const response = await fetch(`/viewrecipes/${id}`, {
+        method: 'DELETE',
     });
     if (response.ok) {
-        document.location.replace('/dashboard');
-      } else {
+        document.location.replace('/homepage');
+    } else {
         alert(response.statusText);
-      }
     }
-    
-    recipes.forEach((recipe) => {
-      recipe.addEventListener('click', () => {
+}
+
+recipes.forEach((recipe) => {
+    recipedelbtn.addEventListener('click', () => {
         deleteRecipe(recipe.dataset.recipeId);
-      });
     });
+});
