@@ -1,21 +1,21 @@
-const seedRecipe = require('./recipe-seeds');
-const seedRecipeIngredient = require('./recipe-ingredient-seeds');
-const seedUsers = require('./user-seeds')
+const seedRecipe = require("./recipe-seeds");
+const seedRecipeIngredient = require("./recipe-ingredient-seeds");
+const seedUsers = require("./user-seeds");
 
-const sequelize = require('../config/connection');
+const sequelize = require("../config/connection");
 
-const seedAll = async() => {
-    await sequelize.sync({ force: true });
-    console.log('--------------');
+const seedAll = async () => {
+    await sequelize.sync({ force: false });
+    console.log("--------------");
 
     await seedUsers();
-    console.log('--------------');
+    console.log("--------------");
 
     await seedRecipe();
-    console.log('--------------');
+    console.log("--------------");
 
     await seedRecipeIngredient();
-    console.log('--------------');
+    console.log("--------------");
 
     process.exit(0);
 };

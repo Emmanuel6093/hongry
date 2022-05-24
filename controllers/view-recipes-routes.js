@@ -1,29 +1,29 @@
-const withAuth = require('../utils/auth')
-const Recipe = require('../models/Recipe');
-const User = require('../models/User');
-const RecipeIngredient = require('../models/RecipeIngredient');
+const withAuth = require("../utils/auth");
+const Recipe = require("../models/Recipe");
+const User = require("../models/User");
+const RecipeIngredient = require("../models/RecipeIngredient");
 
-const router = require('express').Router();
+const router = require("express").Router();
 
 //Get all recipes and render via View-Recipe.handlebars
-router.get('/', (req, res) => {
-    res.render('View-Recipes');
+router.get("/", (req, res) => {
+    res.render("View-Recipes");
 });
 
-router.get('/', async(req, res) => {
+router.get("/", async (req, res) => {
     try {
         const dbRecipeData = await Recipe.findAll({
-            include: [{
-                model: RecipeIngredient,
-                attributes: ['recipe_id', 'ingredient_name', 'quantity', 'unit', ''],
-            }, ],
+            include: [
+                {
+                    model: RecipeIngredient,
+                    attributes: ["recipe_id", "ingredient_name", "quantity", "unit", ""],
+                },
+            ],
         });
 
-        const recipes = dbRecipeData.map((recipe) =>
-            recipe.get({ plain: true })
-        );
+        const recipes = dbRecipeData.map((recipe) => recipe.get({ plain: true }));
 
-        res.render('View-Recipes', {
+        res.render("View-Recipes", {
             recipes,
             loggedIn: req.session.loggedIn,
         });
@@ -33,23 +33,22 @@ router.get('/', async(req, res) => {
     }
 });
 
-router.get('/viewrecipes/:id', withAuth, async(req, res) => {
+router.get("/viewrecipes/:id", withAuth, async (req, res) => {
     try {
         const dbRecipeData = await Recipe.findByPk(req.params.id, {
-            through: [{
-                model: RecipeIngredient,
-                attributes: [
-                    'recipe_id',
-                    'ingredient_name',
-                    'quantity',
-                    'unit',
-                ],
-            }, ],
+            through: [
+                {
+                    model: RecipeIngredient,
+                    attributes: ["recipe_id", "ingredient_name", "quantity", "unit"],
+                },
+            ],
         });
         const recipe = dbRecipeData.get({ plain: true });
-        res.render('View-Recipes', { recipe, loggedIn: req.session.loggedIn });
+        res.render("View-Recipes", { recipe, loggedIn: req.session.loggedIn });
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
     }
 });
+
+module.exports = router;
