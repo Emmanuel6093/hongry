@@ -3,16 +3,16 @@
         <h1 id='header-logo'>H O N G R Y</h1>
         <nav>
           <a class='navItem' href='/'>Home</a>
-          {{#if loggedIn}}
+          {{#if session.loggedIn}}
             <a class='navItem' href ='/viewrecipes'>View Recipes</a>
             <a class='navItem' href ='/addrecipes'>Post a Recipe</a>
+            <a class='navItem' id="logout" href ='/api/users/logout'>Logout</a>
           {{else}}
             <a class='navItem' href='/login'>Login</a>
-            <a class='navItem' id="logout" href ='/logout'>Logout</a>
+            
           {{/if}}
         </nav>
         {{! Empty element to be used with space between to fill~}}
         <div id='blank'></div>
       </header>
       <script src = 'js/homepage.js'></script>
-      <script src='js/logout.js'></script>
