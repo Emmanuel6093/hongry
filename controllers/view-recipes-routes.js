@@ -39,14 +39,14 @@ router.get('/:id', withAuth, async(req, res) => {
         const dbRecipeData = await Recipe.findByPk(req.params.id, {
             include: [{ model: RecipeIngredient }],
         });
-        const recipes = dbRecipeData.map((recipe) => {
-                const recipe = dbRecipeData.get({ plain: true });
-            },
-            res.render('View-Recipes', {
-                recipes,
-                loggedIn: req.session.loggedIn
-            })
+        const recipes = dbRecipeData.map((recipe) =>
+            recipe.get({ plain: true })
         );
+
+        res.render('View-Recipes', {
+            recipes,
+            loggedIn: req.session.loggedIn,
+        });
     } catch (err) {
         console.log(err);
         res.status(500).json(err);

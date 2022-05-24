@@ -1,12 +1,11 @@
-<section class="container">
- <div> <h1>RECIPES</h1>
-    {{#each recipes}}
-        {{#dataValues}}
-            <p>Recipe: {{name}}</p>
-            <p>IMAGE:{{image}}</p>
-            <p>Description:{{description}}</p>
-            {{!-- <p>Ingredients:{{recipe_ingredients[0].ingredient_name}} {{recipe_ingredients[0]_quantity}} {{recipe_ingredients[0].unit}}</p> --}}
-        {{/dataValues}}
-        {{/each}}
-</div> 
-   
+{{#if loggedIn}}
+  <section class="flex-row justify-center">
+    {{#each recipe.recipe_ingredient as |recipe_ingredient|}}
+    {{> recipe_ingredient-details}}
+    {{/each}}
+  </section>
+</section>
+<!-- Otherwise, provide a link to login -->
+{{else}}
+<a href="/login">You must login first to view the paintings</a>
+{{/if}}
