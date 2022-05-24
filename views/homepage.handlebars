@@ -4,8 +4,9 @@
         <nav>
           <a class='navItem' href='/'>Home</a>
           {{#if loggedIn}}
-            <a class='navItem' href ='/dashboard'>Dashboard</a>
-            <a class='navItem' href ='/logout'>Logout</a>
+            <a class='navItem' href ='/viewrecipes'>View Recipes</a>
+            <a class='navItem' href ='/addrecipes'>Post a Recipe</a>
+            <a class='logout' href ='/logout'>Logout</a>
           {{else}}
             <a class='navItem' href='/login'>Login</a>
           {{/if}}
