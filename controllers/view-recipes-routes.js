@@ -33,7 +33,7 @@ router.get('/', async(req, res) => {
     }
 });
 
-router.get('/viewrecipes/:id', withAuth, async(req, res) => {
+router.get('/:id', withAuth, async(req, res) => {
     try {
         const dbRecipeData = await Recipe.findByPk(req.params.id, {
             through: [{
