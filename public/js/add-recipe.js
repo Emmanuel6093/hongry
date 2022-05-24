@@ -34,7 +34,7 @@ async function newRecipeHandler(event) {
     document.location.replace("/");
 }
 
-addIngredientbtn.addEventListener("click", function (event) {
+addIngredientbtn.addEventListener("click", function(event) {
     event.preventDefault();
     const ingredientName = ingredient_name.value;
     const quantityI = quantity.value;

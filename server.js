@@ -32,13 +32,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use(session());
-app.use(function (req, res, next) {
+app.use(function(req, res, next) {
     res.locals.session = req.session;
     next();
 });
 
 app.use(routes);
 
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log("Now listening"));
 });
