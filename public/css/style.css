@@ -52,9 +52,24 @@ h2{
   
   /* height: 100%; */
 }
+
+.recipe-hero {
+  background-repeat: no-repeat;
+  background-position: 50% 23%;
+  background-size: cover;
+  background-image: url("/css/images/food/pancake.jpg")
+}
  
-.card-z-index {
-  z-index: 0 !important;
+.header-z-index {
+  z-index: 1000 !important;
+}
+
+.recipe-p {
+  margin-right: 20px;
+}
+
+.recipe-div1 {
+  background: rgba(255, 255, 255, 0.5);
 }
 
 header a {

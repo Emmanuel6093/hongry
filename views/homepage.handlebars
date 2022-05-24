@@ -1,21 +1,36 @@
 <div class='wrapper'>
-      {{!-- <header>
-        <h1 id='header-logo'>H O N G R Y</h1>
-        <nav>
+  <header class='header-z-index'>
+    <h1 id='header-logo'>H O N G R Y</h1>
+    <nav>
+      <ul>
+        <li>
           <a class='navItem' href='/'>Home</a>
-          {{#if loggedIn}}
-            <a class='navItem' href ='/dashboard'>Dashboard</a>
-            <a class='navItem' href ='/logout'>Logout</a>
-          {{else}}
-            <a class='navItem' href='/login'>Login</a>
-          {{/if}}
-  
-        </nav>
-        {{! Empty element to be used with space between to fill~}}
-        <div id='blank'></div>
-      </header> --}}
-      <!--Nav Bar-->
-    <header>
+        </li>
+        {{#if session.loggedIn}}
+        <li>
+          <a class='navItem' href ='/viewrecipes'>View Recipes</a>
+        </li>
+        <li>
+          <a class='navItem' href ='/addrecipes'>Post a Recipe</a>
+        </li>
+        <li>
+          <a class='navItem' id="logout" href ='/api/users/logout'>Logout</a>
+        </li>
+        {{else}}
+        <li>
+          <a class='navItem' href='/login'>Login</a>
+        </li>
+          
+        {{/if}}
+
+      </ul>
+
+    </nav>
+    {{! Empty element to be used with space between to fill~}}
+    <div id='blank'></div>
+  </header>
+      <!--old Bar-->
+    {{!-- <header>
       <h1 class="title">
           <a href="/">H O N G R Y</a>
           <script src='/public/js/logout.js'></script>
@@ -47,7 +62,7 @@
                  {{/if}}
         </ul>   
       </nav>
-    </header>
+    </header> --}}
         <!--Hero Start--> 
     <div class='mt4 p-5 jumbo-hero d-flex justify-content-center'>
       <div class="card card-z-index " style="width: 18rem;">
@@ -69,26 +84,39 @@
       </div> --}}
     </section>
 <!--Sample of Recipe page-->
-    {{!-- <section>
-      <h2 id="Recipes">Recipes</h2>
-      <img src="css/images/food/pancake.jpg"
-      <h2>Good Old Fashioned Pancakes</h2>
-      <p>PREP: 5 mins</p>
-      <p>COOK: 15 mins</p>
-      <p>SERVINGS: 8</p>
-      <p>Dolore magna fugiat mollit occaecat.</p>
-      <h3>INGREDIENTS</h3>
-      <p>1-<mfac>1/2</mfac> cups all purpose flour</p>
-      <p>3-<mfac>1/2</mfac> teaspon baking powder</p>
-      <p><mfac>1/4</mfac> teaspoon salt</p>
-      <p>1-<mfac>1/4</mfac> cups milk</p>
-      <p>1 egg</p>
-      <p>3 tablespoons butter, melted</p>
-      <h3>DIRECTIONS</h3>
-      <p>1.     In a large bowl, sift together the flour, baking powder, salt and sugar. Make a well in the center and pour in the milk, egg and melted butter; mix until smooth. </p>
-      <p>2.     Heat a lightly oiled griddle or frying pan over medium-high heat. Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake. Brown on both sides and serve hot.</p>
-  <button>Learn More</button>
-    </section> --}}
+    <section>
+      <h2 id="Recipes" class='text-center'>Recipes</h2>
+      <div class='recipe-hero d-flex flex-column-reverse' style='height: 600px'>
+        <div class='recipe-div1'>
+          <h2 class="text-center pt-3" >Good Old Fashioned Pancakes</h2>
+          <div class='d-flex d-flex justify-content-center'>
+            <p class='recipe-p' >PREP: 5 mins</p>
+            <p class='recipe-p' >COOK: 15 mins</p>
+            <p>SERVINGS: 8</p>
+          </div>
+        </div>
+      </div>
+      {{!-- <p>Dolore magna fugiat mollit occaecat.</p> --}}
+      <div class='container'>
+        <div class='row'>
+          <div class='col-6'>
+            <h3>INGREDIENTS</h3>
+            <p>1-<mfac>1/2</mfac> cups all purpose flour</p>
+            <p>3-<mfac>1/2</mfac> teaspon baking powder</p>
+            <p><mfac>1/4</mfac> teaspoon salt</p>
+            <p>1-<mfac>1/4</mfac> cups milk</p>
+            <p>1 egg</p>
+            <p>3 tablespoons butter, melted</p>
+          </div>
+          <div class='col-6'>
+            <h3>DIRECTIONS</h3>
+            <p>1.     In a large bowl, sift together the flour, baking powder, salt and sugar. Make a well in the center and pour in the milk, egg and melted butter; mix until smooth. </p>
+            <p>2.     Heat a lightly oiled griddle or frying pan over medium-high heat. Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake. Brown on both sides and serve hot.</p>
+            <button>Learn More</button>
+          </div>
+        </div>
+      </div>
+    </section>
 {{!-- <section>
   <h2 id="#Testimonials">Testimonials</h2>
   <img src="css/images/people/abigal.jpg">
@@ -122,4 +150,4 @@
     <p>Private Policy</p>
 </footer> --}}
 
-<script src = '../public/js/homepage.js/'></script>
+<script src = 'js/homepage.js'></script>
