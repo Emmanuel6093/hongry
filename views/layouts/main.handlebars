@@ -16,6 +16,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
   </head>
   <body>
+    <header class='header-z-index'>
+    <h1 id='header-logo'>H O N G R Y</h1>
+    <nav>
+      <ul>
+        <li>
+          <a class='navItem' href='/'>Home</a>
+        </li>
+        {{#if session.loggedIn}}
+        <li>
+          <a class='navItem' href ='/viewrecipes'>View Recipes</a>
+        </li>
+        <li>
+          <a class='navItem' href ='/addrecipes'>Post a Recipe</a>
+        </li>
+        <li>
+          <a class='navItem' id="logout" href ='/api/users/logout'>Logout</a>
+        </li>
+        {{else}}
+        <li>
+          <a class='navItem' href='/login'>Login</a>
+        </li>
+          
+        {{/if}}
+
+      </ul>
+
+    </nav>
+    {{! Empty element to be used with space between to fill~}}
+    <div id='blank'></div>
+  </header>
         {{{body}}}
         <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js'></script>
   </body>

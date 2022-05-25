@@ -1,34 +1,5 @@
 <div class='wrapper'>
-  <header class='header-z-index'>
-    <h1 id='header-logo'>H O N G R Y</h1>
-    <nav>
-      <ul>
-        <li>
-          <a class='navItem' href='/'>Home</a>
-        </li>
-        {{#if session.loggedIn}}
-        <li>
-          <a class='navItem' href ='/viewrecipes'>View Recipes</a>
-        </li>
-        <li>
-          <a class='navItem' href ='/addrecipes'>Post a Recipe</a>
-        </li>
-        <li>
-          <a class='navItem' id="logout" href ='/api/users/logout'>Logout</a>
-        </li>
-        {{else}}
-        <li>
-          <a class='navItem' href='/login'>Login</a>
-        </li>
-          
-        {{/if}}
-
-      </ul>
-
-    </nav>
-    {{! Empty element to be used with space between to fill~}}
-    <div id='blank'></div>
-  </header>
+  
       <!--old Bar-->
     {{!-- <header>
       <h1 class="title">
@@ -90,9 +61,9 @@
         <div class='recipe-div1'>
           <h2 class="text-center pt-3" >Good Old Fashioned Pancakes</h2>
           <div class='d-flex d-flex justify-content-center'>
-            <p class='recipe-p' >PREP: 5 mins</p>
+            {{!-- <p class='recipe-p' >PREP: 5 mins</p>
             <p class='recipe-p' >COOK: 15 mins</p>
-            <p>SERVINGS: 8</p>
+            <p>SERVINGS: 8</p> --}}
           </div>
         </div>
       </div>
@@ -112,7 +83,7 @@
             <h3>DIRECTIONS</h3>
             <p>1.     In a large bowl, sift together the flour, baking powder, salt and sugar. Make a well in the center and pour in the milk, egg and melted butter; mix until smooth. </p>
             <p>2.     Heat a lightly oiled griddle or frying pan over medium-high heat. Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake. Brown on both sides and serve hot.</p>
-            <button>Learn More</button>
+            <button >Learn More</button>
           </div>
         </div>
       </div>

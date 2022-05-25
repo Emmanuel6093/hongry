@@ -9,3 +9,7 @@
 5. View-Recipes-Routes needs to be checked for accuracy and functionality. *Insomnia 
 
 6. Homepage needs to have HREFs in the navbar for these endpoints: addrecipes/viewrecipes/logout/ ******DONE******
+
+--MAIN GOALS FOR 05/23/2022--
+    - Finish View-Recipes handlebars and routes
+    -Implement multer and cloudinary for image uploading. 

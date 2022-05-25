@@ -22,6 +22,7 @@ async function newRecipeHandler(event) {
         recipeDesc: recipe_description.value,
         recipeimg: recipe_img.value,
         ingredients: ingredientData,
+        user_id: req.session.user.id
     };
     const newRecipe = await fetch("/addrecipes", {
         method: "POST",
@@ -34,7 +35,7 @@ async function newRecipeHandler(event) {
     document.location.replace("/");
 }
 
-addIngredientbtn.addEventListener("click", function (event) {
+addIngredientbtn.addEventListener("click", function(event) {
     event.preventDefault();
     const ingredientName = ingredient_name.value;
     const quantityI = quantity.value;

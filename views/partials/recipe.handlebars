@@ -2,11 +2,11 @@
       <h2 id="Recipes" class='text-center'>Recipes</h2>
       <div class='recipe-hero d-flex flex-column-reverse' style='height: 600px'>
         <div class='recipe-div1'>
-          <h2 class="text-center pt-3" >Good Old Fashioned Pancakes</h2>
+          <h2 class="text-center pt-3" >{{name}}</h2>
           <div class='d-flex d-flex justify-content-center'>
-            <p class='recipe-p' >PREP: 5 mins</p>
+            {{!-- <p class='recipe-p' >PREP: 5 mins</p>
             <p class='recipe-p' >COOK: 15 mins</p>
-            <p>SERVINGS: 8</p>
+            <p>SERVINGS: 8</p> --}}
           </div>
         </div>
       </div>
@@ -15,18 +15,20 @@
         <div class='row'>
           <div class='col-6'>
             <h3>INGREDIENTS</h3>
-            <p>1-<mfac>1/2</mfac> cups all purpose flour</p>
+             {{#each recipe_ingredients as |recipe_ingredient|}}
+            <p>{{quantity}}{{unit}}{{ingredient_name}}</p>
+            {{/each}}
+            {{!-- <p>1-<mfac>1/2</mfac> cups all purpose flour</p>
             <p>3-<mfac>1/2</mfac> teaspon baking powder</p>
             <p><mfac>1/4</mfac> teaspoon salt</p>
             <p>1-<mfac>1/4</mfac> cups milk</p>
             <p>1 egg</p>
-            <p>3 tablespoons butter, melted</p>
+            <p>3 tablespoons butter, melted</p> --}}
           </div>
           <div class='col-6'>
             <h3>DIRECTIONS</h3>
-            <p>1.     In a large bowl, sift together the flour, baking powder, salt and sugar. Make a well in the center and pour in the milk, egg and melted butter; mix until smooth. </p>
-            <p>2.     Heat a lightly oiled griddle or frying pan over medium-high heat. Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake. Brown on both sides and serve hot.</p>
-            <button>Learn More</button>
+            <p>{{description}}</p>
+           
           </div>
         </div>
       </div>
