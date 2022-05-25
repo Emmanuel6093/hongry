@@ -2,6 +2,18 @@ const withAuth = require("../utils/auth");
 const Recipe = require("../models/Recipe");
 const User = require("../models/User");
 const RecipeIngredient = require("../models/RecipeIngredient");
+const path = require("path");
+const { uuid } = require("uuidv4");
+const multer = require("multer");
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, "public/recipe-images");
+    },
+    filename: (req, file, cb) => {
+        cb(null, uuid() + path.extname(file.originalname));
+    },
+});
+const upload = multer({ storage: storage });
 
 const router = require("express").Router();
 
@@ -10,7 +22,7 @@ router.get("/", (req, res) => {
     res.render("Post-Recipe");
 });
 
-router.post("/", async (req, res) => {
+router.post("/", upload.single("recipeImage"), async (req, res) => {
     try {
         const ingredientData = req.body.ingredients;
         console.log("I TRIED");
@@ -18,7 +30,7 @@ router.post("/", async (req, res) => {
         const newRecipe = await Recipe.create({
             name: req.body.recipeName,
             description: req.body.recipeDesc,
-            image: req.body.recipeimg,
+            image: req.file.filename,
         });
         const recipeId = newRecipe.id;
         console.log(recipeId, ingredientData, req.session.user_id);

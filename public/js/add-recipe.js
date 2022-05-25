@@ -17,25 +17,24 @@ const ingredientData = [];
 
 async function newRecipeHandler(event) {
     event.preventDefault();
-    const recipeDataFromUser = {
+    const recipeDataFromUser = JSON.stringify({
         recipeName: recipe_name.value,
         recipeDesc: recipe_description.value,
-        recipeimg: recipe_img.value,
         ingredients: ingredientData,
-        user_id: req.session.user.id
-    };
+        // user_id: req.session.user.id,
+    });
+    var formData = new FormData();
+    formData.append("recipeInfo", recipeDataFromUser);
+    formData.append("recipeImage", recipe_img.files[0]);
     const newRecipe = await fetch("/addrecipes", {
         method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(recipeDataFromUser),
+        body: formData,
     });
     console.log(":(");
     document.location.replace("/");
 }
 
-addIngredientbtn.addEventListener("click", function(event) {
+addIngredientbtn.addEventListener("click", function (event) {
     event.preventDefault();
     const ingredientName = ingredient_name.value;
     const quantityI = quantity.value;
