@@ -24,12 +24,13 @@ router.get("/", (req, res) => {
 
 router.post("/", upload.single("recipeImage"), async (req, res) => {
     try {
-        const ingredientData = req.body.ingredients;
+        const recipeData = JSON.parse(req.body.recipeInfo);
+        const ingredientData = recipeData.ingredients;
         console.log("I TRIED");
         console.log(ingredientData, req.session.user_id);
         const newRecipe = await Recipe.create({
-            name: req.body.recipeName,
-            description: req.body.recipeDesc,
+            name: recipeData.recipeName,
+            description: recipeData.recipeDesc,
             image: req.file.filename,
         });
         const recipeId = newRecipe.id;
@@ -38,6 +39,7 @@ router.post("/", upload.single("recipeImage"), async (req, res) => {
             data.recipe_id = recipeId;
         });
         await RecipeIngredient.bulkCreate(ingredientData);
+        res.status(200);
     } catch (error) {
         console.log(error);
         res.status(400).json(error);
