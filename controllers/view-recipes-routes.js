@@ -40,7 +40,7 @@ router.get('/:id', withAuth, async(req, res) => {
             include: [{ model: RecipeIngredient }],
         });
         const recipe = dbRecipeData.get({ plain: true })
-        
+
 
         res.render('View-Recipes', {
             recipes: [recipe],
@@ -51,5 +51,4 @@ router.get('/:id', withAuth, async(req, res) => {
         res.status(500).json(err);
     }
 });
-
 module.exports = router
