@@ -6,19 +6,20 @@ const RecipeIngredient = require('../models/RecipeIngredient');
 const router = require('express').Router();
 
 //Get all recipes and render via View-Recipe.handlebars
-router.get('/', (req, res) => {
-    res.render('View-Recipes');
-});
+// router.get('/', (req, res, next) => {
+//     res.render('View-Recipes');
+//     next();
+// });
 
 router.get('/', async(req, res) => {
     try {
+        console.log("THIS GET ROUTE RAN")
         const dbRecipeData = await Recipe.findAll({
-            include: [{
-                model: RecipeIngredient,
-                attributes: ['recipe_id', 'ingredient_name', 'quantity', 'unit', ''],
-            }, ],
+            include: [{ model: RecipeIngredient }]
         });
-
+        // res.status(200).json(dbRecipeData)
+        console.log("TRIED TO GET RECIPES")
+        console.log(dbRecipeData)
         const recipes = dbRecipeData.map((recipe) =>
             recipe.get({ plain: true })
         );
@@ -36,20 +37,19 @@ router.get('/', async(req, res) => {
 router.get('/:id', withAuth, async(req, res) => {
     try {
         const dbRecipeData = await Recipe.findByPk(req.params.id, {
-            through: [{
-                model: RecipeIngredient,
-                attributes: [
-                    'recipe_id',
-                    'ingredient_name',
-                    'quantity',
-                    'unit',
-                ],
-            }, ],
+            include: [{ model: RecipeIngredient }],
         });
-        const recipe = dbRecipeData.get({ plain: true });
-        res.render('View-Recipes', { recipe, loggedIn: req.session.loggedIn });
+        const recipe = dbRecipeData.get({ plain: true })
+        
+
+        res.render('View-Recipes', {
+            recipes: [recipe],
+            loggedIn: req.session.loggedIn,
+        });
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
     }
 });
+
+module.exports = router

@@ -1,18 +1,124 @@
 <div class='wrapper'>
-      <header>
-        <h1 id='header-logo'>H O N G R Y</h1>
-        <nav>
-          <a class='navItem' href='/'>Home</a>
-          {{#if session.loggedIn}}
-            <a class='navItem' href ='/viewrecipes'>View Recipes</a>
-            <a class='navItem' href ='/addrecipes'>Post a Recipe</a>
-            <a class='navItem' id="logout" href ='/api/users/logout'>Logout</a>
-          {{else}}
-            <a class='navItem' href='/login'>Login</a>
-            
-          {{/if}}
-        </nav>
-        {{! Empty element to be used with space between to fill~}}
-        <div id='blank'></div>
-      </header>
-      <script src = 'js/homepage.js'></script>
+  
+      <!--old Bar-->
+    {{!-- <header>
+      <h1 class="title">
+          <a href="/">H O N G R Y</a>
+          <script src='/public/js/logout.js'></script>
+      </h1>
+      <nav>
+           <ul>
+               <li>
+                   <a href="#About">About Us</a>
+                </li> 
+                <li>
+                    <a href="#Recipes">Recipes</a>
+                 </li>
+                 <li>
+                    <a href="#Testimonials">Testimonials</a>
+                 </li>
+                 <li>
+                    <a href="#Contact">Contact Us</a>
+                 </li>
+                 
+                 {{#if loggedIn}}
+                <li>
+                  <a href='/dashboard'>Dashboard</a>
+                    <a href='/logout'>Logout</a>
+                </li>   
+                   {{else}}
+                   <li>
+                    <a class=red href="/login">Log In</a>
+                 </li>
+                 {{/if}}
+        </ul>   
+      </nav>
+    </header> --}}
+        <!--Hero Start--> 
+    <div class='mt4 p-5 jumbo-hero d-flex justify-content-center'>
+      <div class="card card-z-index " style="width: 18rem;">
+        <img src="css/images/logos/Hongry (1).png" class="card-img-top rounded-circle" alt="...">
+        <div class="card-body">
+          <p class="card-text"><span class='fs-2'>Welcome</span> to our site. We are H O N G R Y! Taking your basic ingredients
+                from home and creating scrumptious meals for you to work with what you got!
+                Simply insert your ingredients and we will spit out a recipe you can make with them!</p>
+        </div>
+      </div>
+    </div> 
+
+      <!--About Section-->
+    <section class='mt4 p-5 d-flex justify-content-center flex-column'>
+      <h2 class="text-center" id="About">ABOUT US</h2>
+      <p class="text-center" >We are 4 insipring coders working together to </p>
+      <img class="w-25 align-self-center" src="css/images/backgrounds/pepper.jpg"/>
+      {{!-- <div class='mw-25'>
+      </div> --}}
+    </section>
+<!--Sample of Recipe page-->
+    <section>
+      <h2 id="Recipes" class='text-center'>Recipes</h2>
+      <div class='recipe-hero d-flex flex-column-reverse' style='height: 600px'>
+        <div class='recipe-div1'>
+          <h2 class="text-center pt-3" >Good Old Fashioned Pancakes</h2>
+          <div class='d-flex d-flex justify-content-center'>
+            {{!-- <p class='recipe-p' >PREP: 5 mins</p>
+            <p class='recipe-p' >COOK: 15 mins</p>
+            <p>SERVINGS: 8</p> --}}
+          </div>
+        </div>
+      </div>
+      {{!-- <p>Dolore magna fugiat mollit occaecat.</p> --}}
+      <div class='container'>
+        <div class='row'>
+          <div class='col-6'>
+            <h3>INGREDIENTS</h3>
+            <p>1-<mfac>1/2</mfac> cups all purpose flour</p>
+            <p>3-<mfac>1/2</mfac> teaspon baking powder</p>
+            <p><mfac>1/4</mfac> teaspoon salt</p>
+            <p>1-<mfac>1/4</mfac> cups milk</p>
+            <p>1 egg</p>
+            <p>3 tablespoons butter, melted</p>
+          </div>
+          <div class='col-6'>
+            <h3>DIRECTIONS</h3>
+            <p>1.     In a large bowl, sift together the flour, baking powder, salt and sugar. Make a well in the center and pour in the milk, egg and melted butter; mix until smooth. </p>
+            <p>2.     Heat a lightly oiled griddle or frying pan over medium-high heat. Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake. Brown on both sides and serve hot.</p>
+            <button >Learn More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+{{!-- <section>
+  <h2 id="#Testimonials">Testimonials</h2>
+  <img src="css/images/people/abigal.jpg">
+  <p>Anim magna qui qui sit sit duis qui ea duis deserunt proident consectetur. 
+    Aliqua eu laboris est ex occaecat qui proident laborum sit qui ex anim. Non ex laboris ea in non ex. Fugiat voluptate enim anim sint enim nulla anim non dolor qui tempor sit. 
+    Enim aliquip aliqua minim culpa tempor nisi.</p>
+<img src="css/images/people/john.jpg">
+<p>Anim magna qui qui sit sit duis qui ea duis deserunt proident consectetur. 
+    Aliqua eu laboris est ex occaecat qui proident laborum sit qui ex anim. Non ex laboris ea in non ex. Fugiat voluptate enim anim sint enim nulla anim non dolor qui tempor sit. 
+    Enim aliquip aliqua minim culpa tempor nisi.</p>
+<img src="css/images/people/simon.jpg">
+<p>Anim magna qui qui sit sit duis qui ea duis deserunt proident consectetur. 
+    Aliqua eu laboris est ex occaecat qui proident laborum sit qui ex anim. Non ex laboris ea in non ex. Fugiat voluptate enim anim sint enim nulla anim non dolor qui tempor sit. 
+    Enim aliquip aliqua minim culpa tempor nisi.</p>
+    <button>See more</button>
+</section>
+<footer>
+    <h2>Stay Connected</h2>
+    <p>Sign up for new recipeis, updates, and news about HONGRY!</p>
+    <h2 id="Contact">Contact Us</h2>
+    <form>
+        <label for="contact-name">Your Name</label>
+        <input type="text" id="contact-name" placeholder="Your Name" />
+        <label for="contact-name">Your Name</label>
+        <input type="text" id="contact-name" placeholder="Your Name" />
+        <label for="contact-message">Message</label>
+        <textarea id="contact-message" placeholder="Message"></textarea>
+    
+        <button type="submit">Submit</button>
+      </form>
+    <p>Private Policy</p>
+</footer> --}}
+
+<script src = 'js/homepage.js'></script>

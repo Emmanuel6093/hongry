@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <div class='viewrecipe-container'>
   <form id='viewRecipe-form'>
@@ -6,3 +7,17 @@
    <a class="button" href="/viewrecipes/id">Search Recipe</a>
 </div>
 <script src='js/add-recipe.js' type='text/javascript'></script>
+=======
+<h1>Hello</h1>
+{{#if loggedIn}}
+  <section class="flex-row justify-center">
+    {{#each recipes as |recipe|}}
+    {{> recipe}}
+    {{/each}}
+  </section>
+</section>
+<!-- Otherwise, provide a link to login -->
+{{else}}
+<a href="/login">You must login first to view the paintings</a>
+{{/if}}
+>>>>>>> 1edf5e75ae8ae82a61d759fd73a838c9b680a060
