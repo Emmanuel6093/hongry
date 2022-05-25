@@ -1,16 +1,23 @@
-  <div class='viewrecipe-container'>
-  <form id='viewRecipe-form'>
-    <input type='text' id='view-recipe' placeholder='Search Recipe by ID'>
-    <button id ="submitSearchbtn" type="submit">Search Recipe</button>
+   <section class="recipebg">
+  {{#if loggedIn}}
+    <form id='viewRecipe-form' class="pb-5 pt-5 d-flex justify-content-center">
+    <input type='text' id='view-recipe' placeholder='Search Recipe'>
+    <button class="btn btn-primary" id ="submitSearchbtn" type="submit">Search Recipe</button>
   </form>
-{{#if loggedIn}}
-  <section class="flex-row justify-center">
+  <!--cards-->
+<div class="row row-cols-1 row-cols-md-3 g-4">
     {{#each recipes as |recipe|}}
     {{> recipe}}
     {{/each}}
-  </section>
-</section>
+</div>
+  
+
 <!-- Otherwise, provide a link to login -->
 {{else}}
-<a href="/login">You must login first to view the paintings</a>
+<a href="/login">You must first Log in to View Recipes</a>
 {{/if}}
+</section>
+   <footer class=" bg-black d-flex justify-content-center ">
+            <img src="css/images/logos/Hongry (1).png" class="mt-2 mb-2 footerimg border border-warning border-2 rounded-circle" alt="...">
+        </footer>
+       

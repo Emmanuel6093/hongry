@@ -82,12 +82,16 @@ header h1{
   z-index: 1000 !important;
 }
 
-/*footer logo*/
+/*footer logo for homepage*/
 .foot{
   width: 400px;
   height: auto;
 }
-
+/*footer logo for everything else*/
+.footerimg{
+  width: 100px;
+  height: auto;
+}
 /* .recipe-p {
   margin-right: 20px;
 } */
@@ -95,4 +99,14 @@ header h1{
 /*background opacity boarder around recipe name*/
 .recipe-div1 {
   background: rgba(255, 255, 255, 0.5);
+}
+
+/*background image for view-recipes.handlebars*/
+/*background picture in hero*/
+.recipebg{
+  background-image: url("/css/images/backgrounds/fruit.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
 }
