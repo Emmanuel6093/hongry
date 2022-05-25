@@ -1,4 +1,8 @@
-<h1>Hello</h1>
+  <div class='viewrecipe-container'>
+  <form id='viewRecipe-form'>
+    <input type='text' id='view-recipe' placeholder='Search Recipe by ID'>
+    <button id ="submitSearchbtn" type="submit">Search Recipe</button>
+  </form>
 {{#if loggedIn}}
   <section class="flex-row justify-center">
     {{#each recipes as |recipe|}}
