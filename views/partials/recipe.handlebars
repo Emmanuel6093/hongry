@@ -16,7 +16,10 @@
           <div class='col-6'>
             <h3>INGREDIENTS</h3>
              {{#each recipe_ingredients as |recipe_ingredient|}}
-            <p>{{quantity}}{{unit}}{{ingredient_name}}</p>
+            <p>Ingredient Name: &nbsp;{{ingredient_name}}</p>
+            <p>Quantity:&nbsp; {{quantity}} Unit:&nbsp;{{unit}} <pre> 
+
+            </pre></p>
             {{/each}}
             {{!-- <p>1-<mfac>1/2</mfac> cups all purpose flour</p>
             <p>3-<mfac>1/2</mfac> teaspon baking powder</p>

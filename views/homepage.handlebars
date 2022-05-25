@@ -1,5 +1,12 @@
 <div class='wrapper'>
-  
+  <div class='viewrecipe-container'>
+  <form id='viewRecipe-form'>
+    <input type='text' id='view-recipe' placeholder='Search Recipe by ID'>
+    <button id ="submitSearchbtn" type="submit">Search Recipe</button>
+  </form>
+   
+</div>
+<script src='js/view-recipe.js' type='text/javascript'></script>
       <!--old Bar-->
     {{!-- <header>
       <h1 class="title">
@@ -55,39 +62,7 @@
       </div> --}}
     </section>
 <!--Sample of Recipe page-->
-    <section>
-      <h2 id="Recipes" class='text-center'>Recipes</h2>
-      <div class='recipe-hero d-flex flex-column-reverse' style='height: 600px'>
-        <div class='recipe-div1'>
-          <h2 class="text-center pt-3" >Good Old Fashioned Pancakes</h2>
-          <div class='d-flex d-flex justify-content-center'>
-            {{!-- <p class='recipe-p' >PREP: 5 mins</p>
-            <p class='recipe-p' >COOK: 15 mins</p>
-            <p>SERVINGS: 8</p> --}}
-          </div>
-        </div>
-      </div>
-      {{!-- <p>Dolore magna fugiat mollit occaecat.</p> --}}
-      <div class='container'>
-        <div class='row'>
-          <div class='col-6'>
-            <h3>INGREDIENTS</h3>
-            <p>1-<mfac>1/2</mfac> cups all purpose flour</p>
-            <p>3-<mfac>1/2</mfac> teaspon baking powder</p>
-            <p><mfac>1/4</mfac> teaspoon salt</p>
-            <p>1-<mfac>1/4</mfac> cups milk</p>
-            <p>1 egg</p>
-            <p>3 tablespoons butter, melted</p>
-          </div>
-          <div class='col-6'>
-            <h3>DIRECTIONS</h3>
-            <p>1.     In a large bowl, sift together the flour, baking powder, salt and sugar. Make a well in the center and pour in the milk, egg and melted butter; mix until smooth. </p>
-            <p>2.     Heat a lightly oiled griddle or frying pan over medium-high heat. Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake. Brown on both sides and serve hot.</p>
-            <button >Learn More</button>
-          </div>
-        </div>
-      </div>
-    </section>
+  
 {{!-- <section>
   <h2 id="#Testimonials">Testimonials</h2>
   <img src="css/images/people/abigal.jpg">
