@@ -4,15 +4,8 @@ const User = require("../models/User");
 const RecipeIngredient = require("../models/RecipeIngredient");
 const path = require("path");
 const { uuid } = require("uuidv4");
+
 const multer = require("multer");
-// const storage = multer.diskStorage({
-//     destination: (req, file, cb) => {
-//         cb(null, "public/recipe-images");
-//     },
-//     filename: (req, file, cb) => {
-//         cb(null, uuid() + path.extname(file.originalname));
-//     },
-// });
 
 const cloudinary = require("./cloudinary");
 
@@ -26,6 +19,7 @@ const storage = new CloudinaryStorage({
         cb(null, uuid() + path.extname(file.originalname));
     },
 });
+
 const upload = multer({ storage: storage });
 
 const router = require("express").Router();
