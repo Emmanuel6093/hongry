@@ -5,10 +5,23 @@ const RecipeIngredient = require("../models/RecipeIngredient");
 const path = require("path");
 const { uuid } = require("uuidv4");
 const multer = require("multer");
-const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, "public/recipe-images");
-    },
+// const storage = multer.diskStorage({
+//     destination: (req, file, cb) => {
+//         cb(null, "public/recipe-images");
+//     },
+//     filename: (req, file, cb) => {
+//         cb(null, uuid() + path.extname(file.originalname));
+//     },
+// });
+
+const cloudinary = require("./cloudinary");
+
+const { CloudinaryStorage } = require("multer-storage-cloudinary");
+
+const storage = new CloudinaryStorage({
+    cloudinary: cloudinary,
+    folder: "recipe-images",
+    allowedFormats: ["jpg", "png", "jpeg"],
     filename: (req, file, cb) => {
         cb(null, uuid() + path.extname(file.originalname));
     },
@@ -31,7 +44,7 @@ router.post("/", upload.single("recipeImage"), async (req, res) => {
         const newRecipe = await Recipe.create({
             name: recipeData.recipeName,
             description: recipeData.recipeDesc,
-            image: req.file.filename,
+            image: "https://res.cloudinary.com/dtbmceecb/image/upload/v1653702979/" + req.file.filename,
         });
         const recipeId = newRecipe.id;
         console.log(recipeId, ingredientData, req.session.user_id);
