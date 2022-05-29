@@ -1,0 +1,120 @@
+/*cool google font*/
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+/*nav bar*/
+header {
+    background-color: black;
+    color: white;
+    padding: 20px 35px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+header a {
+  text-decoration: none;
+  color: white; 
+}
+
+header nav {
+  margin: 7px 0;
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+header nav ul li a {
+  padding: 10px 15px;
+  font-weight: lighter;
+  font-size: 1.55vw;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+header nav ul li a:hover {
+  background: rgb(84, 194, 50);
+  color: white;
+  font-weight: bold;
+  border-radius: 15px;
+  
+}
+/*Makes H O N G R Y title in nav bar bold looking*/
+header h1{
+    font-weight: bold;
+    margin: 0;
+    font-size: 36px;
+    color: white; 
+  }
+
+/*background picture in hero*/
+.jumbo-hero{
+  background-image: url("/css/images/backgrounds/spices.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 88%;
+}
+
+/*background picture in testimonial*/
+.test{
+  background-image: url("/css/images/backgrounds/knife.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+/*where picture goes in recipe.handlebars*/
+.recipe-hero {
+  background-repeat: no-repeat;
+  background-position: 50% 23%;
+  background-size: cover;
+  background-image: url("/css/images/food/pancake.jpg")
+}
+ 
+/*brining nav bar over Welcome card*/
+.header-z-index {
+  z-index: 1000 !important;
+}
+
+/*footer logo for homepage*/
+.foot{
+  width: 400px;
+  height: auto;
+}
+/*footer logo for everything else*/
+.footerimg{
+  width: 100px;
+  height: auto;
+}
+/* .recipe-p {
+  margin-right: 20px;
+} */
+
+/*background opacity boarder around recipe name*/
+.recipe-div1 {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/*background image for view-recipes.handlebars*/
+/*background picture in hero*/
+.recipebg{
+  background-image: url("/css/images/backgrounds/fruit.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+}
+/*background for login/sign up page*/
+.login-bg1{
+  background-image: url("/css/images/backgrounds/spoon.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+}
