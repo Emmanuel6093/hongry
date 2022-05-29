@@ -179,6 +179,10 @@ width: 52%;
     border: 3px solid black;
 }
 
+.btn {
+    display: inline-block;
+}
+
 .btn-secondary {
     margin: .5rem 0;
 }
