@@ -1,0 +1,15 @@
+1. Needs logout.handlebars partial for logout button. Need to be linked to the logout.js in public/js. 
+
+2. View-Recipes.handlebars needs to be linked to a view-recipes.js in public/js as well as the view-recipes-routes in controllers. *Those files need to checked/tested
+
+3. View-Recipes.handlebars needs to edited to show all recipes or a single recipe. 
+
+4. Test ability to create a new user and log in. ******DONE******
+
+5. View-Recipes-Routes needs to be checked for accuracy and functionality. *Insomnia 
+
+6. Homepage needs to have HREFs in the navbar for these endpoints: addrecipes/viewrecipes/logout/ ******DONE******
+
+--MAIN GOALS FOR 05/23/2022--
+    - Finish View-Recipes handlebars and routes
+    -Implement multer and cloudinary for image uploading. 
