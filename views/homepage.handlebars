@@ -1,0 +1,99 @@
+<div class='wrapper'>
+  <div class='viewrecipe-container'>
+  <form id='viewRecipe-form'>
+    <input type='text' id='view-recipe' placeholder='Search Recipe by Ingredient Name'>
+    <button id ="submitSearchbtn" type="submit">Search for Recipe</button>
+  </form>
+   
+</div>
+<script src='js/view-recipe.js' type='text/javascript'></script>
+      <!--old Bar-->
+    {{!-- <header>
+      <h1 class="title">
+          <a href="/">H O N G R Y</a>
+          <script src='/public/js/logout.js'></script>
+      </h1>
+      <nav>
+           <ul>
+               <li>
+                   <a href="#About">About Us</a>
+                </li> 
+                <li>
+                    <a href="#Recipes">Recipes</a>
+                 </li>
+                 <li>
+                    <a href="#Testimonials">Testimonials</a>
+                 </li>
+                 <li>
+                    <a href="#Contact">Contact Us</a>
+                 </li>
+                 
+                 {{#if loggedIn}}
+                <li>
+                  <a href='/dashboard'>Dashboard</a>
+                    <a href='/logout'>Logout</a>
+                </li>   
+                   {{else}}
+                   <li>
+                    <a class=red href="/login">Log In</a>
+                 </li>
+                 {{/if}}
+        </ul>   
+      </nav>
+    </header> --}}
+        <!--Hero Start--> 
+    <div class='mt4 p-5 jumbo-hero d-flex justify-content-center'>
+      <div class="card card-z-index " style="width: 18rem;">
+        <img src="css/images/logos/Hongry (1).png" class="card-img-top rounded-circle" alt="...">
+        <div class="card-body">
+          <p class="card-text"><span class='fs-2'>Welcome</span> to our site. We are H O N G R Y! Taking your basic ingredients
+                from home and creating scrumptious meals for you to work with what you got!
+                Simply insert your ingredients and we will spit out a recipe you can make with them!</p>
+        </div>
+      </div>
+    </div> 
+
+      <!--About Section-->
+    <section class='mt4 p-5 d-flex justify-content-center flex-column'>
+      <h2 class="text-center" id="About">ABOUT US</h2>
+      <p class="text-center" >We are 4 aspiring developers working together to create meaningful online experiences for our users. </p>
+      <img class="w-25 align-self-center" src="css/images/backgrounds/pepper.jpg"/>
+      {{!-- <div class='mw-25'>
+      </div> --}}
+    </section>
+<!--Sample of Recipe page-->
+  
+{{!-- <section>
+  <h2 id="#Testimonials">Testimonials</h2>
+  <img src="css/images/people/abigal.jpg">
+  <p>Anim magna qui qui sit sit duis qui ea duis deserunt proident consectetur. 
+    Aliqua eu laboris est ex occaecat qui proident laborum sit qui ex anim. Non ex laboris ea in non ex. Fugiat voluptate enim anim sint enim nulla anim non dolor qui tempor sit. 
+    Enim aliquip aliqua minim culpa tempor nisi.</p>
+<img src="css/images/people/john.jpg">
+<p>Anim magna qui qui sit sit duis qui ea duis deserunt proident consectetur. 
+    Aliqua eu laboris est ex occaecat qui proident laborum sit qui ex anim. Non ex laboris ea in non ex. Fugiat voluptate enim anim sint enim nulla anim non dolor qui tempor sit. 
+    Enim aliquip aliqua minim culpa tempor nisi.</p>
+<img src="css/images/people/simon.jpg">
+<p>Anim magna qui qui sit sit duis qui ea duis deserunt proident consectetur. 
+    Aliqua eu laboris est ex occaecat qui proident laborum sit qui ex anim. Non ex laboris ea in non ex. Fugiat voluptate enim anim sint enim nulla anim non dolor qui tempor sit. 
+    Enim aliquip aliqua minim culpa tempor nisi.</p>
+    <button>See more</button>
+</section>
+<footer>
+    <h2>Stay Connected</h2>
+    <p>Sign up for new recipeis, updates, and news about HONGRY!</p>
+    <h2 id="Contact">Contact Us</h2>
+    <form>
+        <label for="contact-name">Your Name</label>
+        <input type="text" id="contact-name" placeholder="Your Name" />
+        <label for="contact-name">Your Name</label>
+        <input type="text" id="contact-name" placeholder="Your Name" />
+        <label for="contact-message">Message</label>
+        <textarea id="contact-message" placeholder="Message"></textarea>
+    
+        <button type="submit">Submit</button>
+      </form>
+    <p>Private Policy</p>
+</footer> --}}
+
+<script src = 'js/homepage.js'></script>
