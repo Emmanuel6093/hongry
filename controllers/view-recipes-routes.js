@@ -34,16 +34,43 @@ router.get('/', async(req, res) => {
     }
 });
 
-router.get('/:id', withAuth, async(req, res) => {
+router.get('/:ingredient_name', withAuth, async(req, res) => {
     try {
-        const dbRecipeData = await Recipe.findByPk(req.params.id, {
-            include: [{ model: RecipeIngredient }],
-        });
-        const recipe = dbRecipeData.get({ plain: true })
+        const dbRecipeData = await RecipeIngredient.findAll({});
+        const recipes = dbRecipeData.map((recipe) =>
+            recipe.get({ plain: true })
+        );
+        console.log(recipes);
+        searchArray = [];
+
+        for (let i = 0; i < recipes.length; i++) {
+            const recipe_ingredient = recipes[i];
+
+
+            if (recipe_ingredient.ingredient_name === req.params.ingredient_name) {
+                const RecipeData = await Recipe.findByPk(recipe_ingredient.recipe_id)
+                recipe_ingredient.name = RecipeData.name
+                recipe_ingredient.description = RecipeData.description
+                recipe_ingredient.image = RecipeData.image
+                const secondSearchArray = [];
+
+                recipes.forEach(recipeData => {
+                    if (recipeData.recipe_id === recipe_ingredient.recipe_id) {
+                        secondSearchArray.push({ ingredient_name: recipeData.ingredient_name, quantity: recipeData.quantity, unit: recipeData.unit })
+                    }
+                })
+                recipe_ingredient.recipe_ingredients = secondSearchArray
+
+                searchArray.push(recipe_ingredient)
+
+            }
+            console.log("added recipe_ingredient", recipe_ingredient)
+        };
+        console.log(searchArray)
 
 
         res.render('View-Recipes', {
-            recipes: [recipe],
+            recipes: searchArray,
             loggedIn: req.session.loggedIn,
         });
     } catch (err) {
@@ -51,4 +78,5 @@ router.get('/:id', withAuth, async(req, res) => {
         res.status(500).json(err);
     }
 });
+
 module.exports = router

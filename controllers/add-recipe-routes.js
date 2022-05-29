@@ -29,7 +29,7 @@ router.get("/", (req, res) => {
     res.render("Post-Recipe");
 });
 
-router.post("/", upload.single("recipeImage"), async (req, res) => {
+router.post("/", upload.single("recipeImage"), async(req, res) => {
     try {
         const recipeData = JSON.parse(req.body.recipeInfo);
         const ingredientData = recipeData.ingredients;
@@ -46,12 +46,12 @@ router.post("/", upload.single("recipeImage"), async (req, res) => {
             data.recipe_id = recipeId;
         });
         await RecipeIngredient.bulkCreate(ingredientData);
-        res.status(200);
+        res.status(200).json();
     } catch (error) {
         console.log(error);
         res.status(400).json(error);
     }
-    res.redirect("/");
+    // res.redirect("/");
 });
 
 module.exports = router;

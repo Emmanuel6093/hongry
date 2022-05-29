@@ -1,20 +1,22 @@
 /*google font*/
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
-*{
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body{
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 
+
 /*nav bar*/
+
 header {
     background-color: black;
     color: white;
@@ -26,91 +28,100 @@ header {
     position: -webkit-sticky;
     top: 0;
 }
-header h1{
+
+header h1 {
     font-weight: bold;
     margin: 0;
     font-size: 36px;
-    color: white; 
-   
-  }
-.red{
+    color: white;
+}
+
+.red {
     color: orange;
     font-weight: bold;
 }
-/*Hero start*/
-h2{
-    font-family: Dancing, cursive;
 
+
+/*Hero start*/
+
+h2 {
+    font-family: Dancing, cursive;
 }
+
+
 /*background picture in hero*/
-.jumbo-hero{
-  /* position: absolute; */
-  background-image: url("/css/images/backgrounds/spices.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  
-  /* height: 100%; */
+
+.jumbo-hero {
+    /* position: absolute; */
+    background-image: url("/css/images/backgrounds/spices.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* height: 100%; */
 }
 
 .recipe-hero {
-  background-repeat: no-repeat;
-  background-position: 50% 23%;
-  background-size: cover;
-  background-image: url("/css/images/food/pancake.jpg")
+    background-repeat: no-repeat;
+    background-position: 50% 23%;
+    background-size: cover;
+    background-image: url("/css/images/food/pancake.jpg")
 }
- 
+
 .header-z-index {
-  z-index: 1000 !important;
+    z-index: 1000 !important;
 }
 
 .recipe-p {
-  margin-right: 20px;
+    margin-right: 20px;
 }
 
 .recipe-div1 {
-  background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.5);
 }
 
 header a {
     text-decoration: none;
-    color: white; 
-  }
-  
-  header nav {
+    color: white;
+}
+
+header nav {
     margin: 7px 0;
-  }
-  
-  header nav ul {
+}
+
+header nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     list-style: none;
-  }
-  
-  header nav ul li a {
+}
+
+header nav ul li a {
     padding: 10px 15px;
     font-weight: lighter;
     font-size: 1.55vw;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  }
-  
-  header nav ul li a:hover {
+}
+
+header nav ul li a:hover {
     background: rgb(112, 202, 84);
     color: black;
     border-radius: 15px;
     text-shadow: none;
-  }
+}
 
-  /* img {
+
+/* img {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
    position: absolute;
    height: 100%;
   } */
+
+
 /*logo*/
+
 .hero .logo {
     border-radius: 50%;
     width: 20%;
@@ -122,23 +133,25 @@ header a {
     border: 10px solid white;
 }
 
+
 /*Welcome*/
+
 .hero .welcome {
     font-family: 'Dancing Script', cursive;
-    background-color: white; 
-    color: black; 
+    background-color: white;
+    color: black;
     text-align: center;
     margin: auto;
-width: 52%;
+    width: 52%;
     border: 3px solid black;
     padding: 10px;
     font-weight: bold;
     font-size: 50px;
 }
- 
-.about{
-  background-color: white;
-  color: black;
+
+.about {
+    background-color: white;
+    color: black;
 }
 
 #recipe-container {
@@ -157,12 +170,23 @@ width: 52%;
     justify-content: space-between;
     align-items: center;
     margin: .75rem auto;
-    width: 30%;
+    width: 200%;
     min-height: 300px;
     max-height: 300px;
     padding: 10px;
     background-color: white;
     border: 3px solid black;
+}
+
+#recipelist {
+    border: 1px solid rgb(115, 115, 115);
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 2px;
+    margin: 2px auto;
+    height: 250px;
+    width: 400px;
 }
 
 .addingredient-container {
@@ -171,12 +195,19 @@ width: 52%;
     justify-content: space-between;
     align-items: center;
     margin: auto;
-    width: 30%;
+    width: 200%;
     min-height: 300px;
     max-height: 300px;
     padding: 10px;
     background-color: white;
     border: 3px solid black;
+}
+
+#btn-container {
+    text-align: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .btn {
@@ -189,4 +220,12 @@ width: 52%;
 
 #add-recipe-img {
     display: none;
+}
+
+.form-control {
+    margin: 10px
+}
+
+.btn.addIngredientbtn {
+    margin: 20px;
 }

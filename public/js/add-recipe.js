@@ -34,12 +34,12 @@ async function newRecipeHandler(event) {
     document.location.replace("/");
 }
 
-addIngredientbtn.addEventListener("click", function (event) {
+addIngredientbtn.addEventListener("click", function(event) {
     event.preventDefault();
     const ingredientName = ingredient_name.value;
     const quantityI = quantity.value;
     const unitI = unit.value;
-    recipeList.textContent += "\n" + ingredientName + "\n" + quantityI + "\n" + unitI + " || ";
+    recipeList.textContent += ingredientName + ":" + "\n" + quantityI + "\n" + unitI + " || " + "\n" + "-------------------" + "\n";
 
     ingredientData.push({ ingredient_name: ingredientName, quantity: quantityI, unit: unitI });
     ingredient_name.value = "";
