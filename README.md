@@ -1,53 +1,30 @@
-# hongry
-
-Hongry Jiggle :musical_note:
-
-(If you’re Happy and you know it clap your hands)
-If you’re Hongry and you know it clip our app (*click click mouse sound) x2
-If you’re Hongry and you know it, 
-But your pantry doesn’t show it, 
-If you’re Hongry and you know it clip our app
-
-<h1 align="center">Hongry</h1>
-<h2 align="center">By: Gabrielle Befort, Emmanuel Lorenzo, Christopher James Hoke, Mason Morris</h2>
-
-Application that creates recipes based on ingredients that have at home. 
-
-**Deployed website: here**
-
-The following images demonstrates the application functionality: 
-
-Homepage
-Log in
-User Profile
-Recipes
-Post
-
-
-## User Story
-```
-AS A resourceful person 🛩
-I WANT to see what recipes I can create with my ingredients I already have
-SO THAT I can avoid wasted food
-```
-
-## Acceptance Criteria
-
-```
-# Project Proposal Requirements
-​
-- Title
-- Description
-- User Story
-- Wireframe/ sketch
-- Libraries, Packages, and Technologies
-- Repository url
-```
-
-
-
-## Reference websites used to learn: 
-
-In this challenge we spent some time learning how to style the frontend with connecting with backend. Particularly with api calls and sql database storage. We also tried to continue learning (blah blah here). We had our first experience with adding users interacting with the database to add recipes.
-
--add website rescore links here-
+# Hongry
+  ## Badge
+  [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+  ## Description 
+  A web application deployed on Heroku using node.js, bcrypt, cloudinary, sequelize, express, express-handlebars, express-session, handlebars, multer, multer-storage-cloudinary, mysql2, uuidv4. This application stores user session information and allows users to login/create an account, and once that is completed allows the user to post and view recipes, as well as search for recipes by an ingredient via a searchbar on the homepage. 
+  ## Table of contents
+  - [Installation](#Installation)
+  - [Usage](#Usage)
+  - [License](#License)
+  - [Contributions](#Contributions)
+  - [Testing](#Testing)
+  - [Repository Link](#Repository)
+  - [GitHub Info](#GitHub) 
+  ## Installation
+  run npm i, set up mysql, run schema.sql/use hongry_db, npm run seed, then npm start.
+  ## Usage
+  Use your web browser or the heroku deployment 
+  ## License
+  [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+  ## Contributions
+  Senior Developers: Christopher James Hoke, Mason Morris. Junior Developers: Emmanuel Lorenzo, Gabrielle Befort
+  ## Testing
+  Test it by running it in node or check the heroku deployment
+  ## Repository
+  https://github.com/Emmanuel6093/hongry
+  ## GitHub
+  primitiveJ, Emmanuel6093, masontmorris, mrsbefort
+  ## Contact
+  hokecj@gmail.com or message any of the devs directly on GitHub
+  This README.md was generated using READLEMETHIS.
