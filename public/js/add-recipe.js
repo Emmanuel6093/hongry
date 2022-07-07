@@ -39,6 +39,18 @@ addIngredientbtn.addEventListener("click", function(event) {
     const ingredientName = ingredient_name.value;
     const quantityI = quantity.value;
     const unitI = unit.value;
+    console.log(quantityI);
+     if (typeof(ingredientName) !== "string") {
+        alert ("Please enter a valid ingredient name")
+        return;
+    } else if (typeof(unitI) !== "string") {
+        alert ("Please enter a valid unit of measurement")
+        return
+    } else if (ingredientName ==="" || unitI === "" || quantityI === "") {
+        alert ("Please make sure all fields have input")
+        return;
+    } else
+    
     recipeList.textContent += ingredientName + ":" + "\n" + quantityI + "\n" + unitI + " || " + "\n" + "-------------------" + "\n";
 
     ingredientData.push({ ingredient_name: ingredientName, quantity: quantityI, unit: unitI });
